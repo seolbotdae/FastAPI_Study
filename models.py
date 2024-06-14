@@ -40,3 +40,17 @@ class BookUpdate(BaseModel):
                 "synopsis": "Don Quixote is a Spanish novel by Miguel de Cervantes..."
             }
         }
+
+class User(BaseModel):
+    id: str = Field(...)
+    pwd: str = Field(...)
+    nickname: str = Field(...)
+
+    class Config:
+        scheme_extra = {
+            "example": {
+                "id": "UserID",
+                "pwd": "password",
+                "nickname": "nickname"
+            }
+        }
